@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TinyStories Leaderboard</title>
+<title>Simple English Leaderboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -26,10 +26,10 @@ tr.base td{background:var(--base);color:var(--muted);font-style:italic;font-size
 tr:last-child td{border-bottom:0}.rank{color:var(--muted)}
 footer{color:var(--muted);font-size:13px;margin-top:14px}
 </style></head><body><main>
-<h1>TinyStories Leaderboard</h1>
-<p class="sub">Machine Learning Foundations, 2026-2 · 0 teams · updated 2026-11-13 22:16 KST</p>
+<h1>Simple English Leaderboard</h1>
+<p class="sub">Machine Learning Foundations, 2026-2 · 0 teams · updated 2026-11-13 23:51 KST</p>
 <div class="note">
-<p><b>Score:</b> bits per byte on unpublished TinyStories-style stories; lower is better. It is comparable across tokenizers.</p>
+<p><b>Score:</b> bits per byte on unpublished texts in simple English for readers aged 3 to 12: stories, fables, explanations, news, letters, dialogues, instructions, poems and essays. Lower is better, and it is comparable across tokenizers.</p>
 <p><b>Best</b> orders this board. The <b>final ranking</b> uses each team's <b>last</b> accepted upload before Wed 2 Dec 23:59, scored once on a separate private set.</p>
 <p>Shaded rows are reference baselines.</p>
 </div>
@@ -37,13 +37,13 @@ footer{color:var(--muted);font-size:13px;margin-top:14px}
 <div class="wrap"><table>
 <thead><tr><th class="num">#</th><th>Team</th><th>Section</th><th class="num">Best</th><th class="num">Last</th><th class="num">Uploads</th><th>Model</th></tr></thead>
 <tbody>
-<tr class="base"><td></td><td colspan="2">Transformer d=256, 6 layers (5 M), 100 M tokens</td><td class="num">0.89</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">Transformer d=256, 6 layers (5 M), 20 M tokens</td><td class="num">0.99</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">LSTM (1 layer, 1.6 M)</td><td class="num">1.21</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">MLP LM (8 tokens of context, 0.56 M)</td><td class="num">1.41</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">A4 default transformer (0.16 M)</td><td class="num">1.42</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">bzip2 -9</td><td class="num">1.53</td><td></td><td></td><td></td></tr>
-<tr class="base"><td></td><td colspan="2">gzip -9</td><td class="num">2.43</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">Transformer d=256, 6 layers (5 M), 100 M tokens of TinyStories</td><td class="num">1.75</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">Transformer d=256, 6 layers (5 M), 20 M tokens of TinyStories</td><td class="num">1.88</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">LSTM (1 layer, 1.6 M), TinyStories only</td><td class="num">2.06</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">bzip2 -9</td><td class="num">2.16</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">MLP LM (8 tokens of context, 0.56 M), TinyStories only</td><td class="num">2.27</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">A4 default transformer (0.16 M), TinyStories only</td><td class="num">2.31</td><td></td><td></td><td></td></tr>
+<tr class="base"><td></td><td colspan="2">gzip -9</td><td class="num">3.00</td><td></td><td></td><td></td></tr>
 </tbody></table></div>
 <footer>Uploads are scored within a few minutes. Questions about a score: ask in class or on the LMS.</footer>
 </main>
